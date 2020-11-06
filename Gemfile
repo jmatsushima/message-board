@@ -52,5 +52,13 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-# Pagenation
+# Pagination
 gem 'kaminari'
+
+# Debuger
+gem 'pry-byebug', group: :development
+
+# PostgreSQL for production (No need to install local thus "bundle install --without production")
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
